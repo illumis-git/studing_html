@@ -4,23 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>제3주차 과제</title>
+    <link rel="stylesheet" href="JS_CSS.CSS" type="text/css">
 </head>
 <body>
     <h1>회원 정보를 입력해주세요.</h1><hr>
     <fieldset>
         <legend><span style="font-size: 15pt;">제3주차 과제인 회원정보 폼</h2></legend>
         <ul>
-            <li style="list-style-type: square;" >이름 : 안혁준(安爀俊)</li>
+            <li>이름 : 안혁준(安爀俊)</li>
             <br>
-            <li style="list-style-type: square;" >전공 : 모바일 인터넷과</li>
+            <li>전공 : 모바일 인터넷과</li>
             <br>
-            <li style="list-style-type: square;" >별자리 : <input type="text" name="star" id="star" value="염소자리"></li>
+            <li>
+                <select name="select" id="select">
+                <option value="1">양자리 3월 21일 ~ 4월 19일</option>
+                <option value="2">황소자리 4월 20일 ~ 5월 20일</option>
+                <option value="3">쌍둥이자리 5월 21일 ~ 6월 21일</option>
+                <option value="4">게자리 6월 22일 ~ 7월 22일</option>
+                <option value="5">사자자리 7월 23일 ~ 8월 22일</option>
+                <option value="6">처녀자리 8월 23일 ~ 9월 23일</option>
+                <option value="7">천칭자리 9월 24일 ~ 10월 22일</option>
+                <option value="8">전갈자리 10월 23일 ~ 11월 22일</option>
+                <option value="9">궁수자리 11월 23일 ~ 12월 24일</option>
+                <option value="10" selected>염소자리 12월 25일 ~ 1월 19일</option>
+                <option value="11">물병자리 1월 20일 ~ 2월 18일</option>
+                <option value="12">물고기자리 2월 19일 ~ 3월 20일</option>
+            </select>
+            </li>
             <br>
-            <li style="list-style-type: square;" >이메일 : <input type="email" name="email" id="email" placeholder="id@host"></li>
+            <li>이메일 : <input type="email" name="email" id="email" placeholder="id@host"></li>
             <br>
-            <li style="list-style-type: square;" >홈페이지 : <input type="url" name="url" id="url" placeholder="http://"></li>
+            <li>홈페이지 : <input type="url" name="url" id="url" placeholder="http://"></li>
             <br>
-            <li style="list-style-type: square;" >전화번호 : <input type="tel" name="tel" id="tel" placeholder="010-1234-5678"></li>
+            <li>전화번호 : <input type="tel" name="tel" id="tel" placeholder="010-1234-5678"></li>
             <br>
         </ul>
     </fieldset>

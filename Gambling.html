@@ -31,13 +31,19 @@
         <div id="box">
             <span id="first" onclick="random(this)">0</span>
             <span id="second" onclick="random(this)">0</span>
-            <span id="third" onclick="randomLast(this)">0</span>
+            <span id="third" onclick="random(this)">0</span>
         </div>
-        <div id="Result" onclick="Reset()">Let's Game!</div>
+        <div id="GameResult" onclick="Reset(this)">Let's Game!</div>
+        <input type="button" onclick="random(first),random(second),random(third)" onclickvalue="돌리기">
+        <input type="button" onclick="randomLast(first),randomlast(second),randomlast(third)" onclickvalue="멈추기" id="last">
         <script>
+
                 function random(obj){
+                    while(true){
                     var r = Math.floor(Math.random()*9);
                     obj.innerHTML = r;
+                    if(last.)
+                    }
                 }
                 function randomLast(obj){
                     var r = Math.floor(Math.random()*9);
@@ -49,12 +55,12 @@
                     document.getElementById("third").innerHTML = r;
    
                     var rst = document.getElementById("GameResult");
-                    var number1 = documents.getElementById("first").innerHTML;
+                    var number1 = document.getElementById("first").innerHTML;
                     var number2 = document.getElementById("second").innerHTML;
                     var number3 = document.getElementById("third").innerHTML;
                     var str;
-                    if(number1==number2 && number1==number3) {str += "Success";}
-                    else {str += "Fail";}
+                    if(number1==number2 && number1==number3) {str = "Success";}
+                    else {str = "Fail";}
                     str += "(Click here to do again)";
                     rst.innerHTML = str;
                 }

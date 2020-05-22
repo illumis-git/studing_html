@@ -1,0 +1,52 @@
+body{
+    text-align: centor; font-size: 20px;
+}
+p{
+    font-style: italic;
+}
+p.pulse{
+    background-color: aqua;
+}
+p.dsta{
+    background-color: cadetblue;
+}
+#pase{
+    font-style: oblique;
+}
+#vase{
+    font-size: 30px;
+}
+h3:first-letter { /* 가상 클래스 셀렉터 */
+	color : red;
+}
+li:hover { /* 가상 클래스 셀렉터 */
+	background : yellowgreen;
+}
+ul#objects li.active:after, ul#objects li:hover:after {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #fff;
+    box-shadow: 0 0 3px #666;
+    transform: rotate(-45deg);
+    top:5px;
+    right: -8px;
+}
+ul {
+	list-style:		none;
+}
+ul li:before {
+	display:		inline-block;		
+  	width:		0; 		
+  	height:		0; 	
+	border-top:		solid transparent;
+	border-bottom: 	solid transparent;
+	border-left:	        solid black;	
+	border-width:	5px;
+	content:		' ';
+	margin-right:	5px;
+}
+li {
+    list-style: none;
+}
