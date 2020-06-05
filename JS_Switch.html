@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function actionswitch(){
+    var i = parseInt(prompt(""));
+    switch(i){
+        case 1 : document.write("1");
+        case 2 : document.write("2");
+        case 3 : document.write("3");
+        case 4 : document.write("4");
+        case 5 : document.write("5");
+        case 6 : document.write("6");
+        case 7 : document.write("7");
+        case 8 : document.write("8");
+        case 9 : document.write("9"); break;
+        default : document.write("잘못입력했겠지...");
+    }
+    }
+</script>
+<body>
+    switch case문입니다.
+    <button id="button1" onclick="actionswitch();" value="switch-case"></button>
+    <pre><code>function actionswitch(){
+        var i = parseInt(prompt(""));
+        switch(i){
+            case 1 : document.write("1");
+            case 2 : document.write("2");
+            case 3 : document.write("3");
+            case 4 : document.write("4");
+            case 5 : document.write("5");
+            case 6 : document.write("6");
+            case 7 : document.write("7");
+            case 8 : document.write("8");
+            case 9 : document.write("9"); break;
+            default : document.write("잘못입력했겠지...");
+        }
+        }</code></pre>
+</body>
+</html>

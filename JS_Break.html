@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function actionbreak(){
+            var i = 0;
+            while(true){
+                if(i>100){
+                    break;
+                }
+            }
+            document.write(i);
+            i++;
+        }
+    </script>
+</head>
+<body>
+    while break사용
+    문제는 이미 while문설명할때적어버려서 중복이되겠다...
+    첨언하자면 for문은 반복횟수가정해져있을때 while문은 반복횟수를알수가없을때쓴다던가..
+    <input type="button" value="actionbreak예제"id="button1" onclick="actionbreak();">
+    <pre><code>
+        function actionbreak(){
+            var i = 0;
+            while(true){
+                if(i>100){
+                    break;
+                }
+            }
+            document.write(i);
+            i++;
+        }
+    </code></pre>
+</body>
+</html>
