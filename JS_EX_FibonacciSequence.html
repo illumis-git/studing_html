@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>피보나치수열</title>
+    
+</head>
+<body>
+    java Script 로 특정횟수까지의 FibonacciSequence(피보나치수열)값을 구합니다. <br>
+    
+    
+    <div id=edit>
+        <input type="button" value="소수" onclick="print()">
+        테스트영역
+    </div>
+    
+    
+    <script>
+        
+        function print(){
+            var data = prompt("숫자값을 입력해주세요","");
+            var i;
+            var k=1;
+            var text = document.getElementById("edit");
+            for (i=1; i<=data; i++){
+                    
+                        text.innerHTML = text.innerHTML +"<br>"+ def(i);
+                    
+                }
+                
+            }
+            function def(n){
+                if(n>=2){
+                    return n-1 + n-2;
+                } else{
+                    return n;
+                }
+            }
+    </script>
+</body>
+</html>

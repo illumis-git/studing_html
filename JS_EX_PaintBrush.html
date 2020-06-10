@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캔버스_그리기</title>
+    
+</head>
+
+<body onload="init()">
+    java Script 로 화면에 그림을 현재진행형으로 그립니다. <br>
+    <canvas id="myCanvas" width="800" height="500" style="position: relative; border: 1px solid #000;">
+    </canvas>
+    <script>
+        var canvas, context;
+        function init() {
+            canvas = document.getElementById("myCanvas");
+            context = canvas.getContext("2d");
+
+            context.lineWidth = 2; // �� 援듦린 2
+            context.strokeStyle = "blue";
+
+            canvas.addEventListener("mousemove", function (e) { move(e) }, false);
+            canvas.addEventListener("mousedown", function (e) { down(e) }, false);
+            canvas.addEventListener("mouseup", function (e) { up(e) }, false);
+            canvas.addEventListener("mouseout", function (e) { out(e) }, false);
+        }
+
+        var startX = 0, startY = 0; // �쒕옒源낅룞��, 泥섏쓬 留덉슦�ㅺ� �뚮윭吏� 醫뚰몴
+        var dragging = false;
+        function draw(curX, curY) {
+            context.beginPath();
+            context.moveTo(startX, startY);	// 泥섏쓬 留덉슦�ㅻ� �대┃�� 怨�
+            context.lineTo(curX, curY);			// 留덉슦�ㅺ� �대룞�� 怨�
+            context.stroke();
+        }
+        function down(e) { 	// 留덉슦�ㅻ� �대┃�� ��
+            startX = e.offsetX; startY = e.offsetY; dragging = true;
+        }
+
+        function up(e) { dragging = false; }
+
+        function move(e) {	// 留덉슦�ㅻ� �대룞�� ��
+            if (!dragging) return; // 留덉슦�ㅺ� �뚮윭吏�吏� �딆븯�쇰㈃ 由ы꽩
+            var curX = e.offsetX, curY = e.offsetY;
+            draw(curX, curY);
+            startX = curX; startY = curY;
+        }
+
+        function out(e) { dragging = false; }
+    </script>
+</body>
+
+</html>

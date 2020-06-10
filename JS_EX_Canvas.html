@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>캔버스</title>
+    <script>
+        function draw() {
+            var canvas = document.getElementById("canvas1");
+            var context = canvas.getContext("2d");
+            context.font = "italic 35px forte";
+            context.strokeStyle = "green";
+            context.lineWidth = 2;
+            context.textAlign = "left";
+            context.strokeText("ann10624@naver.com", 10, 50);
+
+            context.font = "35px forte";
+            context.fillStyle = "blue";
+            context.textAlign = "right";
+            context.fillText("canvas", 200, 330);
+
+            context.beginPath();
+            context.arc(60, 150, 30, 0, 2.0 * Math.PI, false);
+
+            context.lineWidth = 10;
+            context.strokeStyle = "violet";
+            context.stroke();
+
+            context.beginPath();
+            context.lineWidth = 10;
+            context.strokeStyle = "blue";
+
+
+            context.moveTo(120, 100);
+            context.lineTo(120, 200);
+
+            context.moveTo(120, 150);
+            context.lineTo(160, 150);
+
+            context.stroke();
+
+            context.moveTo(50, 200);
+            context.lineTo(50, 250);
+
+            context.moveTo(50, 250);
+            context.lineTo(120, 250);
+
+            context.stroke();
+
+            context.font = "italic 35px forte";
+            context.strokeStyle = "violet";
+            context.lineWidth = 2;
+            context.textAlign = "left";
+            context.strokeText("혁", 200, 200);
+
+            context.font = "italic 35px forte";
+            context.strokeStyle = "violet";
+            context.lineWidth = 2;
+            context.textAlign = "left";
+            context.strokeText("준", 250, 200);
+        }
+    </script>
+</head>
+
+<body onload="draw()">
+    java Script 로 화면에 지정된 그림을 그립니다. <br>
+    <canvas id="canvas1" height="1280" width="1280">This browser doesn't support canvas</canvas>
+
+
+    <div onload="draw()">
+        테스트영역<br>
+
+    </div>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>소수구하기</title>
+
+</head>
+
+<body>
+    java Script 로 특정숫자가 PrimeNumber(소수)인지를 구합니다. <br>
+
+
+    <div id=edit>
+        <input type="button" value="소수" onclick="print()">
+        테스트영역
+    </div>
+
+
+    <script>
+
+        function print() {
+            var data = prompt("숫자값을 입력해주세요", "");
+            var i;
+            var k = 1;
+            var j = 0;
+            var arraynumber = new Array()
+            var text = document.getElementById("edit");
+            for (i = 2; i <= data; i++) {
+                if (data % i == 0) {
+                    text.innerHTML = data + "는 소수입니다";
+                }
+            }
+            for (i = data; i > 0; i--) {
+                for (k = 2; k < i - 1; k++) {
+                    if (data % i == 0) {
+                        arraynumber[j] = 0;
+                        j++;
+                    }
+                }
+            }
+            arraynumber[j];
+            text.innerHTML = arraynumber.length;
+            for (i = 0; i < arraynumber.length; i++) {
+                
+                text.innerHTML = text.innerHTML + arraynumber[i] + "<br>";
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

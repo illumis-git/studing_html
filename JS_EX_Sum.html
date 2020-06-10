@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1~100까지_합</title>
+    
+</head>
+<body>
+    java Script 로 1~ 100까지의 합을 구합니다. <br>
+    
+    <div id=edit><input type="button" value="1~100합구하기" onclick="print()">
+        테스트영역
+    </div>
+    
+    <script>
+        
+        function print(){
+            var i;
+            var k=0;
+            var text = document.getElementById("edit");
+            for (i=0; i<100; i++){
+                k = k+i;
+            }
+            
+            text.innerHTML = k;
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Factorial</title>
+    
+</head>
+<body>
+    java Script 로 특정숫자의 Factorial값을 구합니다. <br>
+    
+    <div id=edit><input type="button" value="Factorial" onclick="print()">
+        테스트영역
+    </div>
+    
+    <script>
+        
+        function print(){
+            var data = prompt("숫자값을 입력해주세요","");
+            var i;
+            var k=1;
+            var text = document.getElementById("edit");
+            for (i=data; 0<i; i--){
+                k = k*i;
+            }
+            
+            text.innerHTML = k;
+            
+        }
+    </script>
+</body>
+</html>
