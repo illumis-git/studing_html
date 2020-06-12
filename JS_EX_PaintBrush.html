@@ -18,6 +18,7 @@
             canvas.addEventListener("mousedown", function (e) { down(e) }, false);
             canvas.addEventListener("mouseup", function (e) { up(e) }, false);
             canvas.addEventListener("mouseout", function (e) { out(e) }, false);
+            setInterval("changecolor()", 500);
         }
 
         var startX = 0, startY = 0; 
@@ -30,6 +31,7 @@
         }
         function down(e) { 	
             startX = e.offsetX; startY = e.offsetY; dragging = true;
+            
         }
 
         function up(e) { dragging = false; }
@@ -39,14 +41,32 @@
             var curX = e.offsetX, curY = e.offsetY;
             draw(curX, curY);
             startX = curX; startY = curY;
+            
+
         }
 
         function out(e) { dragging = false; }
+        function changecolor(){
+            var rand = Math.floor(Math.random() * 7);
+            switch(rand){
+                case 0 : break;
+                case 1 : context.strokeStyle = "#ff0000"; break;
+                case 2 : context.strokeStyle = "#ff8000"; break;
+                case 3 : context.strokeStyle = "#ffff00"; break;
+                case 4 : context.strokeStyle = "#00ff40"; break;
+                case 5 : context.strokeStyle = "#0000ff"; break;
+                case 6 : context.strokeStyle = "#000080"; break;
+                case 7 : context.strokeStyle = "#ff00ff"; break;
+                default : break;
+            }
+
+        }
     </script>
 </head>
 
 <body onload="init()">
     java Script 로 화면에 그림을 현재진행형으로 그립니다. <br>
+    색상은 빨, 주, 노, 초, 파, 남, 보 중에서 0.1초마다 랜덤으로 변합니다. <br>
     <canvas id="myCanvas" width="800" height="500" style="position: relative; border: 1px solid #000;">
     </canvas>
     
